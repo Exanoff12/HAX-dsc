@@ -4,8 +4,7 @@ jobs:
   report:
     runs-on: ubuntu-latest
     steps:
-      - name: Clone
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v2
       with:
         repository: Exanoff12/cdn
         token: ${{ secrets.API_KEY }}
