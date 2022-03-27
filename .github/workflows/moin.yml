@@ -28,5 +28,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           mkdir ItWorks
+          git config --global user.name "workflow"
+          git config --global user.email "mail@gmail.com"
           git commit -m "works"
           git push -u origin master
