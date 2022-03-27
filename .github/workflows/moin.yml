@@ -30,5 +30,6 @@ jobs:
           mkdir ItWorks
           git config --global user.name "workflow"
           git config --global user.email "mail@gmail.com"
+          git add -A
           git commit -m "works"
           git push -u origin master
