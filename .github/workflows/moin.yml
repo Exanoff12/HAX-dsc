@@ -4,7 +4,10 @@ jobs:
   report:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - name: Clone
+        uses: actions/checkout@v2
+      with:
+        token: ${{ secrets.API_KEY }}
       - name: Create report file
         run: date +%s > report.txt
       - name: Commit report
