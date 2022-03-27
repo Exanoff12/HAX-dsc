@@ -27,7 +27,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: do stuff
         run: |
-          cd $GITHUB_WORKSPACE && mkdir omg
+          cd $GITHUB_WORKSPACE && echo "sus" > sus.txt
           git config --global user.name "workflow"
           git config --global user.email "mail@gmail.com"
           git add -A
