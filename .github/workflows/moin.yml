@@ -6,14 +6,13 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       with:
-        repository: Exanoff12/cdn
         token: ${{ secrets.API_KEY }}
       - name: Create report file
         run: date +%s > report.txt
       - name: Commit report
         run: |
           git config --global user.name 'action man'
-          git config --global user.email '${{ secrets.MAIL }}'
+          git config --global user.email 'mail@susy.org'
           git add -A
           git commit -am "Automated report"
           git push
