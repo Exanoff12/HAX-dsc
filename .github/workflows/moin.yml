@@ -28,5 +28,4 @@ jobs:
       - name: Run a multi-line script
         run: |
           mkdir ItWorks
-          git remote add origin git@github.com:Exanoff12/cdn.git
           git push -u origin master
