@@ -28,4 +28,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           mkdir ItWorks
+          git commit -m "works"
           git push -u origin master
